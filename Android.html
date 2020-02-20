@@ -120,6 +120,43 @@
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
+				<time datetime="2020-02-20T16:24:17+08:00" itemprop="datePublished">2020/02/20</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%A4%9A%E7%BA%BF%E7%A8%8B.html'>多线程</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15821870573046.html" itemprop="url">
+		多线程的定义</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>多个线程同时进行，即多个任务同时进行，其实计算机在任何时刻都只能执行一个线程任务，多线程其实就是在JVM快速调度资源来轮换线程，使得线程不断轮流执行，所以看起来好像在同时执行多个任务。</p>
+
+<h2 id="toc_0">作用</h2>
+
+<p>将耗时操作放入到工作线程中进行工作，将更新UI的操作在主线程中进行。</p>
+
+<h2 id="toc_1">线程同步</h2>
+
+<p>只有当一个线程完全执行完毕后，其他线程才可以使用。<br/>
+需要使用关键字<code>Synchronized</code>进行修饰</p>
+
+<h2 id="toc_2">线程联合</h2>
+
+<p>即在线程A占有CPU资源的期间，通过调用<code>B.join()</code>方法，即线程B的join方法，中断线程A的执行，执行联合他的线程B，知道线程B执行完毕后线程A再重新排队等待CPU资源。</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
 				<time datetime="2020-02-20T15:30:22+08:00" itemprop="datePublished">2020/02/20</time>
 			</div>
 			<div class="tags">posted in 
@@ -129,10 +166,29 @@
 			</div>
 		</div>
 		<h1 class="title" itemprop="name"><a href="15821838228885.html" itemprop="url">
-		</a></h1>
+		线程</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			
+			<h2 id="toc_0">线程分类</h2>
+
+<p>线程主要分为：守护线程和非守护线程</p>
+
+<h3 id="toc_1">守护线程</h3>
+
+<ul>
+<li>定义：守护用户线程即非守护线程，在程序运行时为其他线程提供一种通用服务</li>
+<li>垃圾守护线程</li>
+<li>设置方式：<code>thread.setDaemon(true)</code></li>
+</ul>
+
+<h3 id="toc_2">非守护线程</h3>
+
+<p>主要包括：主线程和子线程</p>
+
+<h3 id="toc_3">守护线程和非守护线程的区别</h3>
+
+<p>虚拟机是否已退出，当所有线程都结束后，没有可以守护的线程了，守护线程会终止，虚拟机也同样会退出</p>
+
 
 			
 			

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	 - yjx学习资料
+  	线程 - yjx学习资料
   	
 	</title>
 
@@ -116,9 +116,28 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name"></h1>
+		<h1 class="title" itemprop="name">线程</h1>
 		<div class="entry-content" itemprop="articleBody">
-			
+			<h2 id="toc_0">线程分类</h2>
+
+<p>线程主要分为：守护线程和非守护线程</p>
+
+<h3 id="toc_1">守护线程</h3>
+
+<ul>
+<li>定义：守护用户线程即非守护线程，在程序运行时为其他线程提供一种通用服务</li>
+<li>垃圾守护线程</li>
+<li>设置方式：<code>thread.setDaemon(true)</code></li>
+</ul>
+
+<h3 id="toc_2">非守护线程</h3>
+
+<p>主要包括：主线程和子线程</p>
+
+<h3 id="toc_3">守护线程和非守护线程的区别</h3>
+
+<p>虚拟机是否已退出，当所有线程都结束后，没有可以守护的线程了，守护线程会终止，虚拟机也同样会退出</p>
+
 		</div>
 	</article>
 	<div class="share-comment">
