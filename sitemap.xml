@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://github.com/yijixin/yijixin.github.io/</loc>
-  <lastmod>2020-02-20T16:12:04+08:00</lastmod>
+  <lastmod>2020-02-20T16:14:43+08:00</lastmod>
 </url>
 
 <url>
@@ -11,6 +11,14 @@
 </url>
 
 
+
+<url>
+  <loc>https://github.com/yijixin/yijixin.github.io/Android.html</loc>
+</url>
+
+<url>
+  <loc>https://github.com/yijixin/yijixin.github.io/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</loc>
+</url>
 
 
 </urlset>
