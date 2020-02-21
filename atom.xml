@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[yjx学习资料]]></title>
+  <link href="https://github.com/yijixin/yijixin.github.io/atom.xml" rel="self"/>
+  <link href="https://github.com/yijixin/yijixin.github.io/"/>
+  <updated>2020-02-20T16:49:27+08:00</updated>
+  <id>https://github.com/yijixin/yijixin.github.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im">MWeb</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Android FrameWork]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15822500489656.html"/>
+    <updated>2020-02-21T09:54:08+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15822500489656.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MVP、MVC和MVVM]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15822500332869.html"/>
+    <updated>2020-02-21T09:53:53+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15822500332869.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[性能优化]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15822500159539.html"/>
+    <updated>2020-02-21T09:53:35+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15822500159539.html</id>
+    <content type="html"><![CDATA[
+<p>Android性能优化一般从稳定方面(内存溢出、崩溃)、流畅性(卡顿问题)、耗损(耗电、流量)、安装包(APK瘦身)方面。</p>
+
+<h2 id="toc_0">稳定</h2>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[android多线程]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15821900540042.html"/>
+    <updated>2020-02-20T17:14:14+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15821900540042.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">线程和进程有什么区别？</h2>
+
+<p>一个进程是一个独立的运行环境，可以看做是一个一个应用程序。而线程是在进程中执行的一个任务。一个进程中可以有很多个线程，每条线程并行执行不同的任务。不同的进程使用不同的内存空间，而所有线程共享一片相同的内存空间。</p>
+
+<h2 id="toc_1">如何在java中实现线程？</h2>
+
+<p>1、集成Thread类，实现方法；<br/>
+2、实现Runnable接口；</p>
+
+<h2 id="toc_2">用户线程和守护线程的区别？</h2>
+
+<p>守护线程是在后台一直执行并不会阻止JVM终止的线程，例如垃圾回收线程，而用户线程就是我们的UI线程和工作线程，当没有用户线程在工作时，JVM会关闭并退出，此时守护线程也将结束。所以区别主要为JVM的是否关闭，守护线程结束意味着JVM的关闭退出。</p>
+
+<h2 id="toc_3">对线程优先级的理解？</h2>
+
+<p>每一个线程都有优先级，整个的线程的优先级从1-10，而系统默认的线程优先级为5，一般来说高优先级的线程在CPU调度时会有优先权，但并不能保证完全一定，依赖于线程调度的实现。</p>
+
+<h2 id="toc_4">启动一个线程是调用run()还是start()方法？</h2>
+
+<p>启动一个线程需要调用start()方法，使线程所代表的虚拟机处于可运行状态，这意味着他可以由JVM调度并执行，但这并不意味着线程会立即执行。run方法是线程启动后进行回调的方法。</p>
+
+<h2 id="toc_5">Thread类的sleep()方法和对象的wait()方法都可以让线程暂停执行，它们有什么区别?</h2>
+
+<p>sleep()是线程Thread类的静态方法，调用此方法会让线程暂停执行指定的时间，将执行机会让给其他线程，但对象锁依然保持，因此休眠时间结束后仍然后再执行本线程。<br/>
+wait()方法是Object类的方法，调用对象的wait()方法后会使当前线程放弃对象的锁，进入对象的等待池中，只用调用notify或者notifyAll()后才能唤醒等待池中的线程进入等锁池，如果线程重新获得对象的锁就可以进入就绪状态。</p>
+
+<h2 id="toc_6">线程的sleep()方法和yield()方法有什么区别？</h2>
+
+<p>1、sleep()方法调用后不会考虑线程的优先级，会给优先级低的线程运行的机会；yield()方法执行后只会给相同优先级或高于他的优先级的线程机会。<br/>
+2、sleep()方法执行后线程进入阻塞状态；yield()方法执行后线程进入就绪状态；<br/>
+3、sleep()方法声明时会抛出InterruptedException异常；yield()方法声明不会有任何异常；<br/>
+4、sleep()方法比yield()方法具有更好的可移植性；</p>
+
+<h2 id="toc_7">为什么wait(), notify()和notifyAll()必须在同步方法或者同步块中被调用？</h2>
+
+<p>由于所有的这些方法都必须在线程持有对象的锁的时候才能执行，所以必要在同步方法或同步块中被调用。</p>
+
+<h2 id="toc_8">如何确保线程安全？</h2>
+
+<p>使用同步、volatile关键字、使用原子类、实现并发锁等。</p>
+
+<h2 id="toc_9">volatile关键字在Java中有什么作用？</h2>
+
+<p>使用volatile关键字修饰的变量，所有的线程都只会直接去读取该变量，而不会去缓存他。这样就会确保线程读取到的变量在同内存中是一致的。</p>
+
+<h2 id="toc_10">如何创建守护线程？</h2>
+
+<p>设置Thread类中的setDaemon为true。注意必须在start()之前设置，否则会抛出异常。</p>
+
+<h2 id="toc_11">什么是ThreadLocal?</h2>
+
+<p>ThreadLocal用于创建线程的本地变量，每个线程都会拥有他们自己的Thread变量，它们可以使用get()\set()方法去获取他们的默认值或者在线程内部改变他们的值。ThreadLocal保证了各个线程的数据互不干扰。<br/>
+ThreadLocal使用set方法，根据线程名为key，存入想要存入的值；调用get方法时，通过当前线程为key的值进行获取value，拿到之前存入的值，如果切换了线程，则拿不到之前线程存入的值，会拿到一个null。<br/>
+即在线程1中初始化了一个ThreadLocal对象localName，并通过set方法，保存了一个值 占小狼，同时在线程1中通过 localName.get()可以拿到之前设置的值，但是如果在线程2中，拿到的将是一个null。</p>
+
+<h2 id="toc_12">什么是死锁(Deadlock)？</h2>
+
+<p>死锁是指两个以上的线程永远阻塞的情况，这种情况产生至少需要两个以上的线程和两个以上的资源。<br/>
+避免嵌套锁，只在需要的地方使用锁和避免无限期等待是避免死锁的通常办法。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[如何实现线程同步？]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15821890325164.html"/>
+    <updated>2020-02-20T16:57:12+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15821890325164.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">Synchronized关键字</h2>
+
+<p>使用关键字Synchronized修饰方法、代码块等。</p>
+
+<h2 id="toc_1">使用volatile实现线程同步</h2>
+
+<p>volatile关键字为域变量的访问提供了一种免锁机制，相当于告诉虚拟机该域可能会被其他线程更新，因此每次使用该域就要重新计算，而不是使用寄存器中的值，不能用来修饰final类型的变量<br/>
+当一个共享变量被volatile修饰时，它会保证修改的值会立即被更新到主存，当有其他线程需要读取时，它会去内存中读取新值。</p>
+
+<h2 id="toc_2">线程池</h2>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[多线程]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15821870573046.html"/>
+    <updated>2020-02-20T16:24:17+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15821870573046.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">多线程的定义</h2>
+
+<p>多个线程同时进行，即多个任务同时进行，其实计算机在任何时刻都只能执行一个线程任务，多线程其实就是在JVM快速调度资源来轮换线程，使得线程不断轮流执行，所以看起来好像在同时执行多个任务。</p>
+
+<h2 id="toc_1">作用</h2>
+
+<p>将耗时操作放入到工作线程中进行工作，将更新UI的操作在主线程中进行。</p>
+
+<h2 id="toc_2">线程同步</h2>
+
+<p>只有当一个线程完全执行完毕后，其他线程才可以使用。<br/>
+需要使用关键字<code>Synchronized</code>进行修饰</p>
+
+<h2 id="toc_3">线程联合</h2>
+
+<p>即在线程A占有CPU资源的期间，通过调用<code>B.join()</code>方法，即线程B的join方法，中断线程A的执行，执行联合他的线程B，知道线程B执行完毕后线程A再重新排队等待CPU资源。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[线程]]></title>
+    <link href="https://github.com/yijixin/yijixin.github.io/15821838228885.html"/>
+    <updated>2020-02-20T15:30:22+08:00</updated>
+    <id>https://github.com/yijixin/yijixin.github.io/15821838228885.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">线程分类</h2>
+
+<p>线程主要分为：守护线程和非守护线程</p>
+
+<h3 id="toc_1">守护线程</h3>
+
+<ul>
+<li>定义：守护用户线程即非守护线程，在程序运行时为其他线程提供一种通用服务</li>
+<li>垃圾守护线程</li>
+<li>设置方式：<code>thread.setDaemon(true)</code></li>
+</ul>
+
+<h3 id="toc_2">非守护线程</h3>
+
+<p>主要包括：主线程和子线程</p>
+
+<h3 id="toc_3">守护线程和非守护线程的区别</h3>
+
+<p>虚拟机是否已退出，当所有线程都结束后，没有可以守护的线程了，守护线程会终止，虚拟机也同样会退出</p>
+
+]]></content>
+  </entry>
+  
+</feed>
